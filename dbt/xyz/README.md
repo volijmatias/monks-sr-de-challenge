@@ -177,7 +177,3 @@ Deliverable A defines the target cloud architecture and data contracts, while th
 
 The dbt project therefore does not reproduce the cloud infrastructure one-to-one. Instead, staging and intermediate models represent the transformation contracts, while the marts represent the production analytical layer.
 
-
-
-:q
-\q
