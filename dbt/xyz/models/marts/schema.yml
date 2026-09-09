@@ -1,0 +1,122 @@
+version: 2
+
+models:
+
+  - name: fct_campaigns
+    description: "Daily campaign-level performance fact built from the 6-hour integration grain."
+
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+
+      - name: campaign_name
+        tests:
+          - not_null
+
+      - name: platform
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['google_ads', 'meta_ads']
+
+      - name: country
+        tests:
+          - not_null
+
+      - name: date
+        tests:
+          - not_null
+
+      - name: impressions
+        tests:
+          - not_null
+
+      - name: clicks
+        tests:
+          - not_null
+
+      - name: spend
+        tests:
+          - not_null
+
+      - name: sessions
+        tests:
+          - not_null
+
+      - name: conversions
+        tests:
+          - not_null
+
+      - name: purchases
+        tests:
+          - not_null
+
+      - name: revenue
+        tests:
+          - not_null
+
+
+  - name: mart_channel_performance
+    description: "Daily channel-level performance mart for business analytics."
+
+    columns:
+      - name: date
+        tests:
+          - not_null
+
+      - name: platform
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['google_ads', 'meta_ads']
+
+      - name: country
+        tests:
+          - not_null
+
+      - name: impressions
+        tests:
+          - not_null
+
+      - name: clicks
+        tests:
+          - not_null
+
+      - name: spend
+        tests:
+          - not_null
+
+      - name: sessions
+        tests:
+          - not_null
+
+      - name: conversions
+        tests:
+          - not_null
+
+      - name: purchases
+        tests:
+          - not_null
+
+      - name: revenue
+        tests:
+          - not_null
+
+      - name: ctr
+        tests:
+          - not_null
+
+      - name: cpc
+        tests:
+          - not_null
+
+      - name: conversion_rate
+        tests:
+          - not_null
+
+      - name: roas
+        tests:
+          - not_null

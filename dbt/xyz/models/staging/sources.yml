@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw data ingested by the challenge lab."
+    schema: raw
+
+    tables:
+      - name: google_analytics_events
+        description: "GA4 event-level data."
+
+      - name: google_ads
+        description: "Google Ads performance data delivered in 6-hour batches."
+
+      - name: meta_ads
+        description: "Meta Ads performance data delivered in 6-hour batches."
